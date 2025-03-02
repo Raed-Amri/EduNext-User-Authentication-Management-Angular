@@ -39,7 +39,7 @@
         <td>
           <button (click)="deleteUser(user.id)" class="btn btn-danger action-btn">Supprimer</button>
           <span class="btn-space"></span>
-          <a [routerLink]="['/update-user', user.id]" class="btn btn-warning action-btn">Mettre à jour</a>
+          <a [routerLink]="['/update', user.id]" class="btn btn-primary action-btn">Modifier</a>
         </td>
       </tr>
     </tbody>
@@ -90,7 +90,7 @@
         <td>
           <button (click)="deleteUser(user.id)" class="btn btn-danger action-btn">Supprimer</button>
           <span class="btn-space"></span>
-          <a [routerLink]="['/update-user', user.id]" class="btn btn-warning action-btn">Mettre à jour</a>
+          <a [routerLink]="['/update', user.id]" class="btn btn-primary action-btn">Modifier</a>
         </td>
       </tr>
     </tbody>
@@ -141,8 +141,9 @@
         <td>
           <button (click)="deleteUser(user.id)" class="btn btn-danger action-btn">Supprimer</button>
           <span class="btn-space"></span>
-          <a [routerLink]="['/update-user', user.id]" class="btn btn-warning action-btn">Mettre à jour</a>
+          <a [routerLink]="['/update', user.id]" class="btn btn-primary action-btn">Modifier</a>
         </td>
+        
       </tr>
     </tbody>
   </table>

@@ -6,12 +6,22 @@ import { User } from '../../models/user';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class UserService {
 
   private apiUrl = 'http://localhost:8050/api/v1/users';
 
 
   constructor(private http: HttpClient) { }
+
+  getAuthHeaders(): HttpHeaders {
+    const token = localStorage.getItem('token');
+    return new HttpHeaders({
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    });
+  }
   getAllUsers(): Observable<any[]> {  // Return an array explicitly
     return this.http.get<any[]>(`${this.apiUrl}/all`);
   }
@@ -21,23 +31,19 @@ export class UserService {
     return this.http.get<User[]>(`${this.apiUrl}/${role}`);
   }
 
-  getUserById(id: number): Observable<any> {
-    const token = localStorage.getItem('token'); // Récupérer le token
-    console.log('Token utilisé:', token); // Vérification
 
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${token}`
-    });
 
-    return this.http.get(`${this.apiUrl}/${id}`, { headers });
+  getUserById(id: number): Observable<User> {
+    return this.http.get<User>(`${this.apiUrl}/${id}`, { headers: this.getAuthHeaders() });
   }
 
-  updateUser(id: number, userData: Partial<User>): Observable<User> {
-    return this.http.put<User>(`${this.apiUrl}/update/${id}`, userData);
+  updateUser(id: number, user: Partial<User>): Observable<User> {
+    return this.http.put<User>(`${this.apiUrl}/update/${id}`, user, { headers: this.getAuthHeaders() });
   }
+
 
   deleteUser(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/delete/${id}`);
   }
-
+ 
 }

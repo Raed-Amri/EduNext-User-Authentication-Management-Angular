@@ -8,5 +8,6 @@ export interface User {
     email_address: string;
     authorities: { authority: string }[];
     mfaEnabled: boolean;
+    roles: String;
   }
   
