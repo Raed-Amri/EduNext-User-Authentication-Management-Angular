@@ -1,27 +1,72 @@
-# TemplateFront
+# 🖥️ EduNext – User Authentication & Management (Angular Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+[![Angular](https://img.shields.io/badge/Angular-16-red?logo=angular&logoColor=white)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.1-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![NPM](https://img.shields.io/badge/NPM-10-red?logo=npm&logoColor=white)](https://www.npmjs.com/)
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📌 Overview
+**EduNext-User-Authentication-Management-Angular** is an **Angular 16 application** that serves as the **frontend for the EduNext study platform**.  
+It connects to the **EduNext backend APIs** to provide **user authentication, profile management, course access, and subscription handling**.  
 
-## Code scaffolding
+The app is designed to be **responsive, user-friendly, and scalable**, providing a modern **SPA experience** for both learners and teachers.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🎯 Project Goal
+The main objectives of this project are to:  
+- Deliver a **clean, user-friendly interface** for learners and teachers.  
+- Seamlessly integrate with the **EduNext backend** via REST APIs.  
+- Enable **role-based dashboards** for different user types.  
+- Allow users to **manage profiles, courses, and subscription packs** efficiently.  
+- Provide a foundation for **AI-assisted learning features** in the future.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🚀 Features
+- **User Registration & Login:** Connect to backend for secure authentication.  
+- **Role-Based Dashboards:** Display content appropriate for learners and teachers.  
+- **Profile Management:** Update personal info and view subscription details.  
+- **Course & Pack Access:** Show courses, quizzes, and exams based on purchased packs.  
+- **Interactive UI Components:** Modern, responsive layout using Angular Material or Bootstrap.  
+- **Notifications & Alerts:** Inform users about subscription expiries, updates, or announcements.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 🛠️ Tech Stack
+- **Framework:** Angular 16+  
+- **Language:** TypeScript 5+  
+- **Package Manager:** NPM 10+  
+- **UI Library:** Angular Material / Bootstrap  
+- **HTTP Client:** Angular HttpClient for backend API communication  
+- **Dependencies:**  
+  - RxJS  
+  - Angular Router  
+  - FormsModule / ReactiveFormsModule  
+  - Angular Material  
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 📁 Project Structure
+| Folder | Description |
+|--------|-------------|
+| `src/app/components` | UI components such as login forms, dashboards, profile pages. |
+| `src/app/services` | Services for API calls and business logic. |
+| `src/app/models` | TypeScript models for data structures (User, Course, Pack, etc.). |
+| `src/app/routes` | Angular routing configuration for navigation. |
+| `src/app/shared` | Shared components, pipes, and utilities. |
+| `src/assets` | Images, icons, and static files. |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+- **Node.js 20+**  
+- **NPM 10+**  
+- **Angular CLI 16+**  
+- **IDE:** VS Code, WebStorm, or any preferred editor  
+
+
